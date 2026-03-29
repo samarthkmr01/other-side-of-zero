@@ -1,61 +1,45 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.2">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Other Side of Zero | Interactive Math</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;The Other Side of Zero | Interactive Math&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="styles.css"&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;header class="dashboard"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="dash-item"&gt;🏆 Streak: &lt;span id="ui-streak"&gt;0&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="dash-item"&gt;⭐ Mastery: &lt;span id="ui-mastery"&gt;0%&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="dash-item"&gt;🚩 Misconceptions Detected: &lt;span id="ui-misconceptions"&gt;None&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;button id="reset-btn" onclick="resetProgress()"&gt;Reset Progress&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;main class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="learning-section" class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 id="concept-title"&gt;Loading...&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="concept-content"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="assessment-section" class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Test Your Knowledge&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p id="question-text"&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="options-container"&gt;&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="support-controls"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button id="hint-btn" onclick="requestHint()"&gt;💡 Get a Hint&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p id="hint-text" class="hidden"&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="remediation-modal" class="modal hidden"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="modal-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2&gt;⚠️ Let's Look Closer!&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p id="remediation-text"&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="closeRemediation()"&gt;I understand, let's try again&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="app.js"&gt;&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+    <header class="dashboard">
+        <div class="dash-item">🏆 Streak: <span id="ui-streak">0</span></div>
+        <div class="dash-item">⭐ Mastery: <span id="ui-mastery">0%</span></div>
+        <div class="dash-item">🚩 Misconceptions Detected: <span id="ui-misconceptions">None</span></div>
+        <button id="reset-btn" onclick="resetProgress()">Reset Progress</button>
+    </header>
+
+    <main class="container">
+        <section id="learning-section" class="card">
+            <h2 id="concept-title">Loading...</h2>
+            <div id="concept-content"></div>
+        </section>
+
+        <section id="assessment-section" class="card">
+            <h3>Test Your Knowledge</h3>
+            <p id="question-text"></p>
+            <div id="options-container"></div>
+            
+            <div class="support-controls">
+                <button id="hint-btn" onclick="requestHint()">💡 Get a Hint</button>
+                <p id="hint-text" class="hidden"></p>
+            </div>
+        </section>
+
+        <div id="remediation-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>⚠️ Let's Look Closer!</h2>
+                <p id="remediation-text"></p>
+                <button onclick="closeRemediation()">I understand, let's try again</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
 </body>
 </html>
